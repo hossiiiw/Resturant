@@ -7,5 +7,7 @@ export type LanguageType = "EN" | "FA";
 
 export type AppContextType = {
   language: LanguageType;
+  theme: boolean;
   handleLanguage: (value: LanguageType) => void;
+  handleTheme: () => void;
 };

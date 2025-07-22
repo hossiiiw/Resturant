@@ -1,6 +1,26 @@
 @import "tailwindcss";
 
+:root {
+  --bgThemeColor: #fff;
+  --textBlackColor: #181818;
+  --textLightColor: #777777;
+}
 
 body {
-    font-family: Poppines;
+  font-family: Poppines;
+}
+
+.bg-theme {
+  background-color: var(--bgThemeColor);
+}
+
+.text-gray {
+  color: var(--textLightColor);
+}
+.bg-text-gray {
+  background-color: var(--textLightColor);
+}
+
+.text-black {
+  color: var(--textBlackColor);
 }

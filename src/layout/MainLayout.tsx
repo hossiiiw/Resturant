@@ -6,7 +6,7 @@ import AppContextProvider from "@/context/AppContext";
 function MainLayout({ children }: ChildrenType) {
   return (
     <AppContextProvider>
-      <div>
+      <div className="bg-theme">
         <Navbar />
         {children}
       </div>
