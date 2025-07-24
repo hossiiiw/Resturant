@@ -11,17 +11,19 @@ function AppContextProvider({ children }: ChildrenType) {
   const handleTheme = () => {
     setTheme(!theme);
   };
-  if (theme) {
-    document.documentElement.style.setProperty("--bgThemeColor", "#000000");
-    document.documentElement.style.setProperty("--textBlackColor", "#fff");
-    document.documentElement.style.setProperty("--textLightColor", "#fff");
-  }
-  if (!theme) {
-    document.documentElement.style.setProperty("--bgThemeColor", "#ffffff");
-    document.documentElement.style.setProperty("--textBlackColor", "#181818");
-    document.documentElement.style.setProperty("--textLightColor", "#777777");
-  }
-  useEffect(() => {}, [theme, handleTheme]);
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.style.setProperty("--bgThemeColor", "#000000");
+      document.documentElement.style.setProperty("--textBlackColor", "#fff");
+      document.documentElement.style.setProperty("--textLightColor", "#fff");
+    }
+    if (!theme) {
+      document.documentElement.style.setProperty("--bgThemeColor", "#ffffff");
+      document.documentElement.style.setProperty("--textBlackColor", "#181818");
+      document.documentElement.style.setProperty("--textLightColor", "#777777");
+    }
+  }, [theme, handleTheme]);
 
   const handleLanguage = (value: LanguageType) => {
     if (value === "EN") {
