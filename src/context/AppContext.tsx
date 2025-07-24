@@ -1,13 +1,20 @@
 "use client";
+import "../i18n";
+
 import { AppContextType, ChildrenType, LanguageType } from "@/types/type";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const AppContext = createContext({} as AppContextType);
 
 function AppContextProvider({ children }: ChildrenType) {
-  const [language, setLanguage] = useState<LanguageType>("EN");
+  // -------------------State-----------------------------
   const [theme, setTheme] = useState<boolean>(false);
+  const [language, setLanguage] = useState<LanguageType>();
+  const [hasMounted, setHasMounted] = useState(false);
 
+  // -------------------State-----------------------------
+
+  // ----------------------Theme---------------------------------
   const handleTheme = () => {
     setTheme(!theme);
   };
@@ -25,24 +32,29 @@ function AppContextProvider({ children }: ChildrenType) {
     }
   }, [theme, handleTheme]);
 
-  const handleLanguage = (value: LanguageType) => {
-    if (value === "EN") {
+  // ----------------------Theme---------------------------------
+
+  // --------------------------Language-------------------
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  const hanleLanguage = (lang: "fa" | "en") => {
+    setLanguage(lang);
+    if (lang === "en") {
       document.body.dir = "ltr";
-      return;
     }
 
-    if (value === "FA") {
+    if (lang === "fa") {
       document.body.dir = "rtl";
     }
-
-    setLanguage(value);
   };
-
-  useEffect(() => {}, [language]);
+  if (!hasMounted) return null; // یا یه لودر ساده
+  // --------------------------Language-------------------
 
   return (
     <AppContext.Provider
-      value={{ handleLanguage, handleTheme, language, theme }}
+      value={{ handleTheme, hanleLanguage, theme, language }}
     >
       {children}
     </AppContext.Provider>

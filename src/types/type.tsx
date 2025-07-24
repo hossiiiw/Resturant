@@ -3,11 +3,11 @@ import React from "react";
 export type ChildrenType = {
   children: React.ReactNode;
 };
-export type LanguageType = "EN" | "FA";
+export type LanguageType = "en" | "fa" | undefined;
 
 export type AppContextType = {
-  language: LanguageType;
   theme: boolean;
-  handleLanguage: (value: LanguageType) => void;
+  language: LanguageType;
   handleTheme: () => void;
+  hanleLanguage: (lang: "en" | "fa") => void;
 };

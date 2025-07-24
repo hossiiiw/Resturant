@@ -1,39 +1,30 @@
 "use client";
 import { useCart } from "@/context/AppContext";
-import { LanguageType } from "@/types/type";
 import {
   HeartIcon,
   MapPinIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>("EN");
-  const selectRef = useRef<HTMLSelectElement>(null);
+  const { t, i18n } = useTranslation();
+  const { handleTheme, hanleLanguage, theme, language } = useCart();
+  const lang = language === "en" ? "fa" : "en";
 
-  const { handleLanguage, handleTheme, theme, language } = useCart();
-
-  const handleSelectedLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = e.target.value as LanguageType;
-    setSelectedLanguage(value);
-    sendToContext(value);
+  const switchLang = async (lng: "en" | "fa") => {
+    i18n.changeLanguage(lng);
+    hanleLanguage(lng);
   };
-  const sendToContext = (language: LanguageType) => {
-    handleLanguage(language);
-  };
-
-  console.log(language);
   return (
     <nav className="w-full flex flex-col items-center justify-center py-2 ">
       {/* top */}
       <div className="w-full flex  flex-col md:flex-row gap-4 justify-between items-center py-2 md:px-32 lg:px-64 ">
         <div className="flex items-center  justify-center">
           <MapPinIcon className="w-4 text-black " />
-          <p className="text-gray text-xs md:text-lg">
-            Tabriz Roshdiye paladiom complex
-          </p>
+          <p className="text-gray text-xs md:text-lg">{t("Address")}</p>
         </div>
 
         <div className="flex items-center gap-2 md:gap-6 text-black    text-sm">
@@ -45,23 +36,18 @@ function Navbar() {
             {theme === false ? "Light" : "Dark"}
           </button>
           {/*  */}
-          <select
-            value={selectedLanguage}
-            ref={selectRef}
-            onChange={handleSelectedLanguage}
-          >
-            <option value="EN">English</option>
-            <option value="FA">فارسی</option>
-          </select>
+          <button onClick={() => switchLang(lang)}>
+            {language === "en" ? "FA" : "EN"}
+          </button>
           <select>
             <option value="USD">USD</option>
             <option value="IRR">IRR</option>
           </select>
 
           <div className="text-xs md:text-lg">
-            <Link href={"/"}>Sign in</Link>
+            <Link href={"/"}>{t("SignIn")}</Link>
             <span className="mx-2 md:mx-4">/</span>
-            <Link href={"/"}>Sign Up</Link>
+            <Link href={"/"}>{t("SignUp")}</Link>
           </div>
         </div>
       </div>
@@ -79,13 +65,13 @@ function Navbar() {
         <div className="bg-green-300 w-[80%] my-3 md:w-[50%] p-2 flex items-center justify-center rounded-lg border-2 border-green-600">
           <ul className="flex gap-8 font-bold text-green-950 ">
             <li>
-              <Link href={"/"}>Home</Link>
+              <Link href={"/"}>{t("Home")}</Link>
             </li>
             <li>
-              <Link href={"/"}>Menu</Link>
+              <Link href={"/"}>{t("Menu")}</Link>
             </li>
             <li>
-              <Link href={"/"}>Contact us</Link>
+              <Link href={"/"}>{t("Contact us")}</Link>
             </li>
           </ul>
         </div>
@@ -102,7 +88,9 @@ function Navbar() {
               </span>
             </div>
             <div className="mt-2">
-              <p className="text-gray  text-sm text-black ">Shopping cart :</p>
+              <p className="text-gray  text-sm text-black ">
+                {t("ShoppingCart")} :
+              </p>
               <span className="font-bold text-black ">$500</span>
             </div>
           </div>
