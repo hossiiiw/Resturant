@@ -68,7 +68,7 @@ function Navbar() {
               <Link href={"/"}>{t("Home")}</Link>
             </li>
             <li>
-              <Link href={"/"}>{t("Menu")}</Link>
+              <Link href={"/menu"}>{t("Menu")}</Link>
             </li>
             <li>
               <Link href={"/"}>{t("Contact us")}</Link>
