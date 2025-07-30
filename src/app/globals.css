@@ -24,3 +24,34 @@ body {
 .text-black {
   color: var(--textBlackColor);
 }
+
+
+
+ .swiper-slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .swiper-slide img {
+    height: 192px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 767px) {
+  .swiper-slide img {
+    height: 256px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .swiper-slide img {
+    height: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-slide img {
+    height: 384px;
+  }
+} 

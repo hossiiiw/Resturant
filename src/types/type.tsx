@@ -11,3 +11,12 @@ export type AppContextType = {
   handleTheme: () => void;
   hanleLanguage: (lang: "en" | "fa") => void;
 };
+
+export interface ISliderImage {
+  id: string;
+  src: string;
+}
+
+export interface ISliderProps {
+  images: ISliderImage;
+}
