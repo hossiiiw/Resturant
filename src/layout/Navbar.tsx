@@ -18,6 +18,7 @@ function Navbar() {
     i18n.changeLanguage(lng);
     hanleLanguage(lng);
   };
+
   return (
     <nav className="w-full flex flex-col items-center justify-center py-2 ">
       {/* top */}

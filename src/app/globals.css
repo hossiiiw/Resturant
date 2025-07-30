@@ -10,6 +10,10 @@ body {
   font-family: Poppines;
 }
 
+.input-bg {
+  background-color: #1d1c1c;
+}
+
 .bg-theme {
   background-color: var(--bgThemeColor);
 }
@@ -25,9 +29,7 @@ body {
   color: var(--textBlackColor);
 }
 
-
-
- .swiper-slide img {
+.swiper-slide img {
   width: 100%;
   object-fit: cover;
 }
@@ -54,4 +56,4 @@ body {
   .swiper-slide img {
     height: 384px;
   }
-} 
+}

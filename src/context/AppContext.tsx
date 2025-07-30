@@ -17,7 +17,20 @@ function AppContextProvider({ children }: ChildrenType) {
   // ----------------------Theme---------------------------------
   const handleTheme = () => {
     setTheme(!theme);
+    localStorage.setItem("theme", theme.toString());
   };
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    console.log(theme);
+    if (theme === "false") {
+      setTheme(true);
+    }
+
+    if (theme === "true") {
+      setTheme(false);
+    }
+  }, []);
 
   useEffect(() => {
     if (theme) {
