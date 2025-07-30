@@ -1,13 +1,16 @@
 "use client";
 
-import { ISliderProps } from "@/types/type";
+import { ISliderImage } from "@/types/type";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-function Slider({ images }: ISliderProps) {
+interface SliderProps {
+  images: ISliderImage[];
+}
+function Slider({ images }: SliderProps) {
   return (
     <div className="w-full min-h-[200px]">
       <Swiper

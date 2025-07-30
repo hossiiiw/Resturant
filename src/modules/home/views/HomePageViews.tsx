@@ -6,7 +6,7 @@ import { ISliderImage } from "@/types/type";
 
 async function HomePageViews() {
   const sliderImages = await axios
-    .get<ISliderImage>("http://localhost:3001/slider")
+    .get<ISliderImage[]>("http://localhost:3001/slider")
     .then((res) => {
       return res.data;
     });

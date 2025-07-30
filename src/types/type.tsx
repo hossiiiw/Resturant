@@ -12,11 +12,11 @@ export type AppContextType = {
   hanleLanguage: (lang: "en" | "fa") => void;
 };
 
+export interface ISliderProps {
+  images: ISliderImage;
+}
+
 export interface ISliderImage {
   id: string;
   src: string;
-}
-
-export interface ISliderProps {
-  images: ISliderImage;
 }
