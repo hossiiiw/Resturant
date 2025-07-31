@@ -5,5 +5,35 @@
   "ShoppingCart": "ShoppingCart",
   "Home": "Home",
   "Menu": "Menu",
-  "Contact us": "Contanct us"
+  "Contact us": "Contanct us",
+
+  "footer": {
+    "logo": "hossiiw",
+    "link": {
+      "title": "LINK",
+      "about": "about",
+      "meet": "Meet our team",
+      "case": "Case stories",
+      "latest": "Latest",
+      "contact": "Contact"
+    },
+    "other": {
+      "title": "OTHER LINK",
+      "careers": "Careers",
+      "creative": "Creative Agency",
+      "digital": "Digital Agency",
+      "marketing": "Marketing",
+      "services": "Digital Services"
+    },
+    "news": {
+      "title": "NEWSLETTER",
+      "p": "Subscribe us & receive our offers and updates your inbox directly",
+      "email": "Email Address"
+    },
+    "allRight": {
+      "title": "All rights received 2025. Hossiiw Restaurant",
+      "term": "Terms Of Use",
+      "privacy": "Privacy Policy"
+    }
+  }
 }
