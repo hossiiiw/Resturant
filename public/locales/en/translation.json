@@ -35,5 +35,9 @@
       "term": "Terms Of Use",
       "privacy": "Privacy Policy"
     }
+  },
+  
+  "btn" : {
+    "addBtn" : "Add Product"
   }
 }

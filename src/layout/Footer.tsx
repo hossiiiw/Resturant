@@ -23,7 +23,7 @@ function Footer() {
           </p>
           <div className="grid grid-cols-2  md:flex justify-center gap-8 md:gap-4">
             <Link target="_blank" href={"https://t.me/hossiiiw"}>
-              <FaTelegram className="text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:bg-orange-400 transition-all duration-300 cursor-pointer " />
+              <FaTelegram className="icon-color text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:-translate-y-1 transition-all duration-300 cursor-pointer " />
             </Link>
             <Link
               target="_blank"
@@ -31,16 +31,16 @@ function Footer() {
                 "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fhossiiiw%2F&is_from_rle"
               }
             >
-              <FaInstagram className="text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:bg-orange-400 transition-all duration-300 cursor-pointer " />
+              <FaInstagram className="icon-color text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:-translate-y-1 transition-all duration-300 cursor-pointer " />
             </Link>
             <Link target="_blank" href={"https://github.com/hossiiiw"}>
-              <FaGithub className="text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:bg-orange-400 transition-all duration-300 cursor-pointer " />
+              <FaGithub className="icon-color text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:-translate-y-1 transition-all duration-300 cursor-pointer " />
             </Link>
             <Link
               target="_blank"
               href={"https://www.linkedin.com/in/hossein-imani-98a40b1a5/"}
             >
-              <FaLinkedin className="text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:bg-orange-400 transition-all duration-300 cursor-pointer " />
+              <FaLinkedin className="icon-color text-2xl text-black bg-white w-12 h-12 md:w-16 md:h-16 rounded-full p-2 md:p-3 hover:-translate-y-1 transition-all duration-300 cursor-pointer " />
             </Link>
           </div>
         </div>
@@ -138,7 +138,9 @@ function Footer() {
         <p>{t("footer.allRight.title")}</p>
         <div className="hidden md:block">
           <Link href={""}>{t("footer.allRight.term")}</Link>
-          <Link href={""} className="mx-2">{t("footer.allRight.privacy")}</Link>
+          <Link href={""} className="mx-2">
+            {t("footer.allRight.privacy")}
+          </Link>
         </div>
       </div>
       {/* bottom */}

@@ -4,6 +4,8 @@
   --bgThemeColor: #fff;
   --textBlackColor: #181818;
   --textLightColor: #777777;
+  --iconColor: #fea405;
+  --foodbgColor: #EEEEEE;
 }
 
 body {
@@ -27,6 +29,14 @@ body {
 
 .text-black {
   color: var(--textBlackColor);
+}
+
+.icon-color {
+  color: var(--iconColor);
+}
+
+.food-bg {
+  background-color: var(--foodbgColor);
 }
 
 .swiper-slide img {

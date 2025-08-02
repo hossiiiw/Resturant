@@ -9,7 +9,7 @@ function MainLayout({ children }: ChildrenType) {
     <AppContextProvider>
       <div className="bg-theme">
         <Navbar />
-        <div className="sm:px-0 md:px-22 lg:44 h-screen">{children}</div>
+        <div className="sm:px-0 md:px-22 lg:44 ">{children}</div>
       </div>
       <Footer />
     </AppContextProvider>
