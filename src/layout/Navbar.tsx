@@ -1,12 +1,12 @@
 "use client";
 import { useCart } from "@/context/AppContext";
+import { formatMoney } from "@/utils/formatMonet";
 import {
   HeartIcon,
   MapPinIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
@@ -40,11 +40,6 @@ function Navbar() {
           <button onClick={() => switchLang(lang)}>
             {language === "en" ? "FA" : "EN"}
           </button>
-          <select>
-            <option value="USD">USD</option>
-            <option value="IRR">IRR</option>
-          </select>
-
           <div className="text-xs md:text-lg">
             <Link href={"/"}>{t("SignIn")}</Link>
             <span className="mx-2 md:mx-4">/</span>
@@ -92,7 +87,9 @@ function Navbar() {
               <p className="text-gray  text-sm text-black ">
                 {t("ShoppingCart")} :
               </p>
-              <span className="font-bold text-black ">$500</span>
+              <span className="font-bold text-black ">
+                {language === "en" ? "$400" : "ریال " + formatMoney("200000")}
+              </span>
             </div>
           </div>
         </div>

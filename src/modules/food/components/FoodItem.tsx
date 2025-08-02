@@ -3,10 +3,12 @@ import Image from "next/image";
 import React from "react";
 import db from "./../../../data/db.json";
 import AddBtn from "./AddBtn";
-import CounterBtn from "./CounterBtn";
+import { useCart } from "@/context/AppContext";
+import { formatMoney } from "@/utils/formatMonet";
 
 function FoodItem() {
   const image = db.menu;
+  const { language } = useCart();
   return (
     <div className="food-bg p-4 rounded-xl mt-12 ">
       <Image
@@ -21,7 +23,9 @@ function FoodItem() {
           <p>Soup</p>
           <span>4.1+</span>
         </div>
-        <p className="p-2">20000</p>
+        <p className="p-2">
+          {language === "en" ? "$24" : "ریال" + formatMoney("450000")}
+        </p>
         <AddBtn />
         {/* <CounterBtn /> */}
       </div>
