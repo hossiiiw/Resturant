@@ -55,7 +55,7 @@ function Footer() {
           </Link>
           <Link
             href={""}
-            className="hover:-translate-y-1 hover:text-orange-400 transition-all duration-300 text-lg "
+            className="hover:-translate-y-1 hover:text-orange-400 transition-all duration-300 text-lg hidden md:block "
           >
             {t("footer.link.meet")}
           </Link>
@@ -107,7 +107,7 @@ function Footer() {
           </Link>
           <Link
             href={""}
-            className="hover:-translate-y-1 hover:text-orange-400 transition-all duration-300 text-lg "
+            className="hover:-translate-y-1 hover:text-orange-400 transition-all duration-300 text-lg  "
           >
             {t("footer.other.services")}
           </Link>

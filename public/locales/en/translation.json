@@ -36,8 +36,15 @@
       "privacy": "Privacy Policy"
     }
   },
-  
-  "btn" : {
-    "addBtn" : "Add Product"
+
+  "btn": {
+    "addBtn": "Add Product"
+  },
+
+  "MenuFilter": {
+    "fastfood": "FastFood",
+    "kebab": "Kebab",
+    "drink": "Drink",
+    "desert": "Desert"
   }
 }

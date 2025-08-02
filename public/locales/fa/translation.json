@@ -38,5 +38,12 @@
 
   "btn": {
     "addBtn": "اضافه کردن غذا"
+  },
+
+  "MenuFilter": {
+    "fastfood": "فست فود",
+    "kebab": "کباب",
+    "drink": "نوشیدنی",
+    "desert": "دسر"
   }
 }

@@ -5,7 +5,7 @@
   --textBlackColor: #181818;
   --textLightColor: #777777;
   --iconColor: #fea405;
-  --foodbgColor: #EEEEEE;
+  --foodbgColor: #eeeeee;
 }
 
 body {
@@ -42,6 +42,22 @@ body {
 .swiper-slide img {
   width: 100%;
   object-fit: cover;
+}
+
+.menu-img {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)
+    ),
+    /* گرادیان از شفاف به سیاه */ url("./../../public/images/menu.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: rgba(#000, #fff, 0.2);
+}
+.menu-bg {
+  background-color: #222831;
 }
 
 @media (max-width: 640px) {
