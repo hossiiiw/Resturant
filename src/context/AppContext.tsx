@@ -10,7 +10,7 @@ function AppContextProvider({ children }: ChildrenType) {
   // -------------------State-----------------------------
   const [theme, setTheme] = useState<boolean>(false);
   const [language, setLanguage] = useState<LanguageType>();
-  const [money, setMoney] = useState<any>();
+  const [money, setMoney] = useState<LanguageType>();
   const [hasMounted, setHasMounted] = useState(false);
 
   // -------------------State-----------------------------
