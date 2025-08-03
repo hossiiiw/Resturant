@@ -52,7 +52,9 @@ function AppContextProvider({ children }: ChildrenType) {
   useEffect(() => {
     setHasMounted(true);
     const language = localStorage.getItem("i18nextLng");
-    setMoney(language);
+    if (language === "fa" || language === "en") {
+      setMoney(language);
+    }
   }, []);
 
   const hanleLanguage = (lang: "fa" | "en") => {

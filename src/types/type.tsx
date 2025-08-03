@@ -3,7 +3,7 @@ import React from "react";
 export type ChildrenType = {
   children: React.ReactNode;
 };
-export type LanguageType = "en" | "fa" | undefined;
+export type LanguageType = "en" | "fa" | undefined | string | null;
 
 export type AppContextType = {
   theme: boolean;
