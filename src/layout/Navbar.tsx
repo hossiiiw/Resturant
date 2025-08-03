@@ -77,12 +77,12 @@ function Navbar() {
           <span className="w-[0.5px] h-5 bg-text-gray"></span>
           {/*  */}
           <div className="flex justify-center items-center gap-2">
-            <div className="relative">
+            <Link href={"/cart"} className="relative">
               <ShoppingCartIcon className="w-8 h-8 cursor-pointer text-black " />
               <span className="absolute -top-2 right-0 bg-green-700 w-5 h-5 rounded-full flex items-center justify-center font-bold text-white text-xs">
                 2
               </span>
-            </div>
+            </Link>
             <div className="mt-2">
               <p className="text-gray  text-sm text-black ">
                 {t("ShoppingCart")} :
