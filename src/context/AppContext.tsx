@@ -10,6 +10,7 @@ function AppContextProvider({ children }: ChildrenType) {
   // -------------------State-----------------------------
   const [theme, setTheme] = useState<boolean>(false);
   const [language, setLanguage] = useState<LanguageType>();
+  const [money, setMoney] = useState<any>();
   const [hasMounted, setHasMounted] = useState(false);
 
   // -------------------State-----------------------------
@@ -50,6 +51,8 @@ function AppContextProvider({ children }: ChildrenType) {
   // --------------------------Language-------------------
   useEffect(() => {
     setHasMounted(true);
+    const language = localStorage.getItem("i18nextLng");
+    setMoney(language);
   }, []);
 
   const hanleLanguage = (lang: "fa" | "en") => {
@@ -62,12 +65,24 @@ function AppContextProvider({ children }: ChildrenType) {
       document.body.dir = "rtl";
     }
   };
+  useEffect(() => {
+    const language = localStorage.getItem("i18nextLng");
+    setMoney(language);
+    if (language === "en") {
+      document.body.dir = "ltr";
+    }
+
+    if (language === "fa") {
+      document.body.dir = "rtl";
+    }
+  }, [hanleLanguage]);
+
   if (!hasMounted) return null; // یا یه لودر ساده
   // --------------------------Language-------------------
 
   return (
     <AppContext.Provider
-      value={{ handleTheme, hanleLanguage, theme, language }}
+      value={{ handleTheme, hanleLanguage, theme, language, money }}
     >
       {children}
     </AppContext.Provider>

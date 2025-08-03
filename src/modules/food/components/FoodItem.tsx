@@ -8,7 +8,7 @@ import { formatMoney } from "@/utils/formatMonet";
 
 function FoodItem() {
   const image = db.menu;
-  const { language } = useCart();
+  const { language, money } = useCart();
   return (
     <div className="food-bg p-4 rounded-xl mt-12 ">
       <Image
@@ -24,7 +24,7 @@ function FoodItem() {
           <span>4.1+</span>
         </div>
         <p className="p-2">
-          {language === "en" ? "$24" : "ریال" + formatMoney("450000")}
+          {money === "en" ? "$24" : "ریال" + formatMoney("450000")}
         </p>
         <AddBtn />
         {/* <CounterBtn /> */}

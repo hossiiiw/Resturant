@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
-  const { handleTheme, hanleLanguage, theme, language } = useCart();
+  const { handleTheme, hanleLanguage, theme, language, money } = useCart();
   const lang = language === "en" ? "fa" : "en";
 
   const switchLang = async (lng: "en" | "fa") => {
@@ -88,7 +88,8 @@ function Navbar() {
                 {t("ShoppingCart")} :
               </p>
               <span className="font-bold text-black ">
-                {language === "en" ? "$400" : "ریال " + formatMoney("200000")}
+                {/* {language === "en" ? "$400" : "ریال " + formatMoney("200000")} */}
+                {money === "en" ? "$400" : "ریال " + formatMoney("200000")}
               </span>
             </div>
           </div>

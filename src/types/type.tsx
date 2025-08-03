@@ -8,6 +8,7 @@ export type LanguageType = "en" | "fa" | undefined;
 export type AppContextType = {
   theme: boolean;
   language: LanguageType;
+  money: string | null | undefined;
   handleTheme: () => void;
   hanleLanguage: (lang: "en" | "fa") => void;
 };
