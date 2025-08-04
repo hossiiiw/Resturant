@@ -45,12 +45,13 @@ body {
 }
 
 .menu-img {
+  height: 100%;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.8)
     ),
-    /* گرادیان از شفاف به سیاه */ url("./../../public/images/menu.jpg");
+   url("./../../public/images/menu.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,6 +59,15 @@ body {
 }
 .menu-bg {
   background-color: #222831;
+}
+
+.glassy-bg {
+background: rgba(255, 255, 255, 0.43);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.1px);
+-webkit-backdrop-filter: blur(5.1px);
+border: 1px solid rgba(255, 255, 255, 1);
 }
 
 @media (max-width: 640px) {
