@@ -46,5 +46,38 @@
     "kebab": "Kebab",
     "drink": "Drink",
     "desert": "Desert"
+  },
+  "login": {
+    "title1": "Login",
+    "title2": "Welcome! Sign in to continue",
+    "label1": "Email",
+    "lable2": "Password",
+    "placeholder1": "Enter your email",
+    "placeholder2": "Enter your password",
+    "forget": "Forgot your password?",
+    "remember": "Remember me",
+    "login": "Login",
+    "or": "Or",
+    "google": "login with google",
+    "account": "Don't have an account?",
+    "SignIn": "Register"
+  },
+  "signUp": {
+    "title1": "Register on the site",
+    "title2": "Enter your information to create an account",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "number": "Phone number",
+    "email": "Email",
+    "password": "Password",
+    "placeholder1": "Enter your name",
+    "placeholder2": "Enter last name",
+    "placeholder3": "Enter phone number",
+    "placeholder4": "Enter your email",
+    "placeholder5": "Enter your password",
+    "signUp": "Registration",
+    "google": "Sign up with Google",
+    "signIn": "Do you have an account?",
+    "login": "log in"
   }
 }

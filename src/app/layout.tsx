@@ -26,9 +26,7 @@ export default function RootLayout({
           precedence="default"
         />
       </head>
-      <body className="bg-theme">
-        <MainLayout>{children}</MainLayout>
-      </body>
+      <body className="bg-theme">{children}</body>
     </html>
   );
 }

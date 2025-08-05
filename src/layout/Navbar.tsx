@@ -41,9 +41,9 @@ function Navbar() {
             {language === "en" ? "FA" : "EN"}
           </button>
           <div className="text-xs md:text-lg">
-            <Link href={"/"}>{t("SignIn")}</Link>
+            <Link href={"/login"}>{t("SignIn")}</Link>
             <span className="mx-2 md:mx-4">/</span>
-            <Link href={"/"}>{t("SignUp")}</Link>
+            <Link href={"/signUp"}>{t("SignUp")}</Link>
           </div>
         </div>
       </div>
