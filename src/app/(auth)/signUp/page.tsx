@@ -1,5 +1,6 @@
 "use client";
 import { useAuth } from "@/context/AuthContext";
+import { User } from "@/data/users";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -32,9 +33,15 @@ function SignUp() {
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     localStorage.setItem("user", JSON.stringify(data));
-    addUser(data);
+    addUser({
+      firstName: data.firstname,
+      lastName: data.lastname,
+      number: data.number,
+      email: data.email,
+      password: data.password,
+    });
     reset();
     router.push("/login");
   };

@@ -1,5 +1,5 @@
 "use client";
-import { users } from "@/data/users";
+import { User, users } from "@/data/users";
 import { ChildrenType, IAuthContextType } from "@/types/type";
 import axios from "axios";
 import { createContext, useContext, useEffect } from "react";
@@ -7,7 +7,7 @@ import { createContext, useContext, useEffect } from "react";
 const AuthContext = createContext({} as IAuthContextType);
 
 function AuthContextProvider({ children }: ChildrenType) {
-  const addUser = (data: any) => {
+  const addUser = (data: User) => {
     users.push(data);
     // axios("http://localhost:3001/users", {
     //   method: "POST",

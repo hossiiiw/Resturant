@@ -16,7 +16,7 @@ export type AppContextType = {
 };
 
 export interface IAuthContextType {
-  addUser: (data: any) => void;
+  addUser: (data: User) => void;
 }
 
 export interface ISliderProps {
