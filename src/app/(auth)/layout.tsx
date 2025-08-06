@@ -1,12 +1,15 @@
 import AppContextProvider from "@/context/AppContext";
+import AuthContextProvider from "@/context/AuthContext";
 import { ChildrenType } from "@/types/type";
 import React from "react";
 
 function layout({ children }: ChildrenType) {
   return (
-    <AppContextProvider>
-      <div>{children}</div>
-    </AppContextProvider>
+    <AuthContextProvider>
+      <AppContextProvider>
+        <div>{children}</div>
+      </AppContextProvider>
+    </AuthContextProvider>
   );
 }
 

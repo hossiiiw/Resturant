@@ -1,5 +1,6 @@
 "use client";
 import { useCart } from "@/context/AppContext";
+import { useAuth } from "@/context/AuthContext";
 import { formatMoney } from "@/utils/formatMonet";
 import {
   HeartIcon,
@@ -27,7 +28,7 @@ function Navbar() {
           <MapPinIcon className="w-4 text-black " />
           <p className="text-gray text-xs md:text-lg">{t("Address")}</p>
         </div>
-
+        <h1 className="bg-orange-300 p-2 rounded-xl font-bold ">حسین ایمانی</h1>
         <div className="flex items-center gap-2 md:gap-6 text-black    text-sm">
           {/* them */}
           <button

@@ -1,11 +1,44 @@
 "use client";
+import { useAuth } from "@/context/AuthContext";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FcGoogle } from "react-icons/fc";
+import z from "zod";
 
 function SignUp() {
+  // -----------------zod------------------
+  type FormData = z.infer<typeof schema>;
+  const schema = z.object({
+    firstname: z.string().min(3, "حداقل باید 3 کاراکتر باشد"),
+    lastname: z.string().min(3, "حداقل باید 3 کاراکتر باشد"),
+    number: z.string().regex(/^\+?\d{10,12}$/, "شماره تلفن معتبر نیست"),
+    email: z.email("ایمیل معتبر نیست"),
+    password: z.string().min(6, "رمز عبور باید حداقل 6 کاراکتر باشد"),
+  });
+  // -----------------zod------------------
+  //---------------i18n-------------
   const { t } = useTranslation();
+  //---------------i18n-------------
+  //------------useForm-----------
+  const router = useRouter();
+  const { addUser } = useAuth();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({ resolver: zodResolver(schema) });
+
+  const onSubmit = (data: any) => {
+    localStorage.setItem("user", JSON.stringify(data));
+    addUser(data);
+    reset();
+    router.push("/login");
+  };
+  //------------useForm-----------
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl">
@@ -16,15 +49,19 @@ function SignUp() {
         <p className="text-center text-gray-500 mb-8">{t("signUp.title2")}</p>
 
         {/* Form */}
-        <div className="space-y-6">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div>
             <label
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.firstname")}
+              {errors.firstname && (
+                <p className="text-red-500">{errors.firstname.message}</p>
+              )}
             </label>
             <input
+              {...register("firstname", { required: true })}
               type="text"
               id="firstName"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
@@ -37,8 +74,12 @@ function SignUp() {
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.lastname")}
+              {errors.lastname && (
+                <p className="text-red-500">{errors.lastname.message}</p>
+              )}
             </label>
             <input
+              {...register("lastname", { required: true })}
               type="text"
               id="lastName"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
@@ -51,8 +92,12 @@ function SignUp() {
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.number")}
+              {errors.number && (
+                <p className="text-red-500">{errors.number.message}</p>
+              )}
             </label>
             <input
+              {...register("number", { required: true })}
               type="tel"
               id="phone"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
@@ -65,8 +110,12 @@ function SignUp() {
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.email")}
+              {errors.email && (
+                <p className="text-red-500">{errors.email.message}</p>
+              )}
             </label>
             <input
+              {...register("email", { required: true })}
               type="email"
               id="email"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
@@ -79,8 +128,12 @@ function SignUp() {
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.password")}
+              {errors.password && (
+                <p className="text-red-500">{errors.password.message}</p>
+              )}
             </label>
             <input
+              {...register("password", { required: true })}
               type="password"
               id="password"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
@@ -95,7 +148,7 @@ function SignUp() {
           >
             {t("signUp.signUp")}
           </button>
-        </div>
+        </form>
 
         {/* Divider */}
         <div className="flex items-center my-6">

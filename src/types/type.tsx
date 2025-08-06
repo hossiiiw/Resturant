@@ -1,4 +1,6 @@
+import { User } from "@/data/users";
 import React from "react";
+import z, { Schema } from "zod";
 
 export type ChildrenType = {
   children: React.ReactNode;
@@ -13,6 +15,10 @@ export type AppContextType = {
   hanleLanguage: (lang: "en" | "fa") => void;
 };
 
+export interface IAuthContextType {
+  addUser: (data: any) => void;
+}
+
 export interface ISliderProps {
   images: ISliderImage;
 }
@@ -21,3 +27,11 @@ export interface ISliderImage {
   id: string;
   src: string;
 }
+
+export type TSingUpForm = {
+  firstname: string;
+  lastname: string;
+  number: string;
+  email: string;
+  password: string;
+};

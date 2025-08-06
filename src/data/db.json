@@ -1,9 +1,12 @@
 {
   "menu": [
     {
-      "id": 1,
+      "id": "1",
       "category": "غذای اصلی",
-      "name": { "fa": "جوجه کباب", "en": "Joojeh Kebab" },
+      "name": {
+        "fa": "جوجه کباب",
+        "en": "Joojeh Kebab"
+      },
       "price": 180000,
       "description": {
         "fa": "جوجه کباب با دورچین و نان",
@@ -12,9 +15,12 @@
       "image": "/images/Barley_soup_with_fresh_vegetables.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "category": "پیش‌غذا",
-      "name": { "fa": "سالاد سزار", "en": "Caesar Salad" },
+      "name": {
+        "fa": "سالاد سزار",
+        "en": "Caesar Salad"
+      },
       "price": 80000,
       "description": {
         "fa": "سالاد تازه با سس سزار",
@@ -23,9 +29,12 @@
       "image": "/images/caesar.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "category": "غذای اصلی",
-      "name": { "fa": "کباب کوبیده", "en": "Kubideh Kebab" },
+      "name": {
+        "fa": "کباب کوبیده",
+        "en": "Kubideh Kebab"
+      },
       "price": 160000,
       "description": {
         "fa": "کباب کوبیده با برنج زعفرانی",
@@ -34,9 +43,12 @@
       "image": "/images/kubideh.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "category": "پیش‌غذا",
-      "name": { "fa": "میرزا قاسمی", "en": "Mirza Ghasemi" },
+      "name": {
+        "fa": "میرزا قاسمی",
+        "en": "Mirza Ghasemi"
+      },
       "price": 60000,
       "description": {
         "fa": "بادمجان کبابی با گوجه و تخم‌مرغ",
@@ -45,9 +57,12 @@
       "image": "/images/mirza.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "category": "غذای اصلی",
-      "name": { "fa": "زرشک پلو با مرغ", "en": "Zereshk Polo with Chicken" },
+      "name": {
+        "fa": "زرشک پلو با مرغ",
+        "en": "Zereshk Polo with Chicken"
+      },
       "price": 170000,
       "description": {
         "fa": "برنج زعفرانی با زرشک و مرغ",
@@ -56,9 +71,12 @@
       "image": "/images/zereshk.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "category": "دسر",
-      "name": { "fa": "بستنی سنتی", "en": "Traditional Ice Cream" },
+      "name": {
+        "fa": "بستنی سنتی",
+        "en": "Traditional Ice Cream"
+      },
       "price": 50000,
       "description": {
         "fa": "بستنی زعفرانی با تکه‌های خامه",
@@ -67,9 +85,12 @@
       "image": "/images/icecream.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "category": "نوشیدنی",
-      "name": { "fa": "دوغ محلی", "en": "Local Doogh" },
+      "name": {
+        "fa": "دوغ محلی",
+        "en": "Local Doogh"
+      },
       "price": 25000,
       "description": {
         "fa": "دوغ سنتی با نعنا",
@@ -78,9 +99,12 @@
       "image": "/images/doogh.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "category": "غذای اصلی",
-      "name": { "fa": "قرمه سبزی", "en": "Ghormeh Sabzi" },
+      "name": {
+        "fa": "قرمه سبزی",
+        "en": "Ghormeh Sabzi"
+      },
       "price": 190000,
       "description": {
         "fa": "خورش سبزی با گوشت و برنج",
@@ -89,9 +113,12 @@
       "image": "/images/ghormeh.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "category": "پیش‌غذا",
-      "name": { "fa": "کشک بادمجان", "en": "Kashk-e Bademjan" },
+      "name": {
+        "fa": "کشک بادمجان",
+        "en": "Kashk-e Bademjan"
+      },
       "price": 55000,
       "description": {
         "fa": "بادمجان کبابی با کشک و نعنا داغ",
@@ -100,9 +127,12 @@
       "image": "/images/kashk.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "category": "غذای اصلی",
-      "name": { "fa": "پیتزا مارگاریتا", "en": "Margherita Pizza" },
+      "name": {
+        "fa": "پیتزا مارگاریتا",
+        "en": "Margherita Pizza"
+      },
       "price": 150000,
       "description": {
         "fa": "پیتزا با پنیر موزارلا و ریحان",
@@ -111,9 +141,12 @@
       "image": "/images/pizza.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "category": "غذای اصلی",
-      "name": { "fa": "برگر کلاسیک", "en": "Classic Burger" },
+      "name": {
+        "fa": "برگر کلاسیک",
+        "en": "Classic Burger"
+      },
       "price": 120000,
       "description": {
         "fa": "برگر گوشت با کاهو و گوجه",
@@ -122,9 +155,12 @@
       "image": "/images/burger.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "category": "دسر",
-      "name": { "fa": "کیک شکلاتی", "en": "Chocolate Cake" },
+      "name": {
+        "fa": "کیک شکلاتی",
+        "en": "Chocolate Cake"
+      },
       "price": 60000,
       "description": {
         "fa": "کیک شکلاتی با گاناش",
@@ -133,9 +169,12 @@
       "image": "/images/chocolatecake.jpg"
     },
     {
-      "id": 13,
+      "id": "13",
       "category": "نوشیدنی",
-      "name": { "fa": "موخیتو", "en": "Mojito" },
+      "name": {
+        "fa": "موخیتو",
+        "en": "Mojito"
+      },
       "price": 40000,
       "description": {
         "fa": "نوشیدنی خنک با نعنا و لیمو",
@@ -144,9 +183,12 @@
       "image": "/images/mojito.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "category": "غذای اصلی",
-      "name": { "fa": "خورش فسنجان", "en": "Fesenjan Stew" },
+      "name": {
+        "fa": "خورش فسنجان",
+        "en": "Fesenjan Stew"
+      },
       "price": 200000,
       "description": {
         "fa": "خورش گردو و انار با مرغ",
@@ -155,9 +197,12 @@
       "image": "/images/fesenjan.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "category": "پیش‌غذا",
-      "name": { "fa": "سوپ جو", "en": "Barley Soup" },
+      "name": {
+        "fa": "سوپ جو",
+        "en": "Barley Soup"
+      },
       "price": 45000,
       "description": {
         "fa": "سوپ جو با سبزیجات تازه",
@@ -166,9 +211,12 @@
       "image": "/images/barleysoup.jpg"
     },
     {
-      "id": 16,
+      "id": "16",
       "category": "غذای اصلی",
-      "name": { "fa": "چلو ماهی", "en": "Fish with Rice" },
+      "name": {
+        "fa": "چلو ماهی",
+        "en": "Fish with Rice"
+      },
       "price": 220000,
       "description": {
         "fa": "ماهی کبابی با برنج زعفرانی",
@@ -177,9 +225,12 @@
       "image": "/images/fish.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "category": "دسر",
-      "name": { "fa": "شله زرد", "en": "Sholeh Zard" },
+      "name": {
+        "fa": "شله زرد",
+        "en": "Sholeh Zard"
+      },
       "price": 40000,
       "description": {
         "fa": "دسر زعفرانی با خلال بادام",
@@ -188,17 +239,26 @@
       "image": "/images/sholehzard.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "category": "نوشیدنی",
-      "name": { "fa": "چای ایرانی", "en": "Persian Tea" },
+      "name": {
+        "fa": "چای ایرانی",
+        "en": "Persian Tea"
+      },
       "price": 20000,
-      "description": { "fa": "چای سیاه سنتی", "en": "Traditional black tea" },
+      "description": {
+        "fa": "چای سیاه سنتی",
+        "en": "Traditional black tea"
+      },
       "image": "/images/tea.jpg"
     },
     {
-      "id": 19,
+      "id": "19",
       "category": "غذای اصلی",
-      "name": { "fa": "پاستا آلفردو", "en": "Alfredo Pasta" },
+      "name": {
+        "fa": "پاستا آلفردو",
+        "en": "Alfredo Pasta"
+      },
       "price": 140000,
       "description": {
         "fa": "پاستا با سس خامه‌ای آلفردو",
@@ -207,9 +267,12 @@
       "image": "/images/alfredo.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "category": "پیش‌غذا",
-      "name": { "fa": "حمص", "en": "Hummus" },
+      "name": {
+        "fa": "حمص",
+        "en": "Hummus"
+      },
       "price": 50000,
       "description": {
         "fa": "حمص با روغن زیتون و نان پیتا",
@@ -218,9 +281,12 @@
       "image": "/images/hummus.jpg"
     },
     {
-      "id": 21,
+      "id": "21",
       "category": "غذای اصلی",
-      "name": { "fa": "کباب سلطانی", "en": "Soltani Kebab" },
+      "name": {
+        "fa": "کباب سلطانی",
+        "en": "Soltani Kebab"
+      },
       "price": 250000,
       "description": {
         "fa": "ترکیب کباب کوبیده و برگ با برنج",
@@ -229,9 +295,12 @@
       "image": "/images/soltani.jpg"
     },
     {
-      "id": 22,
+      "id": "22",
       "category": "دسر",
-      "name": { "fa": "تیرامیسو", "en": "Tiramisu" },
+      "name": {
+        "fa": "تیرامیسو",
+        "en": "Tiramisu"
+      },
       "price": 65000,
       "description": {
         "fa": "دسر ایتالیایی با قهوه و ماسکارپونه",
@@ -240,9 +309,12 @@
       "image": "/images/tiramisu.jpg"
     },
     {
-      "id": 23,
+      "id": "23",
       "category": "نوشیدنی",
-      "name": { "fa": "لیموناد", "en": "Lemonade" },
+      "name": {
+        "fa": "لیموناد",
+        "en": "Lemonade"
+      },
       "price": 35000,
       "description": {
         "fa": "لیموناد تازه و خنک",
@@ -251,9 +323,12 @@
       "image": "/images/lemonade.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "category": "غذای اصلی",
-      "name": { "fa": "خورش قیمه", "en": "Gheimeh Stew" },
+      "name": {
+        "fa": "خورش قیمه",
+        "en": "Gheimeh Stew"
+      },
       "price": 170000,
       "description": {
         "fa": "خورش لپه با گوشت و سیب‌زمینی",
@@ -262,9 +337,12 @@
       "image": "/images/gheimeh.jpg"
     },
     {
-      "id": 25,
+      "id": "25",
       "category": "پیش‌غذا",
-      "name": { "fa": "سالاد شیرازی", "en": "Shirazi Salad" },
+      "name": {
+        "fa": "سالاد شیرازی",
+        "en": "Shirazi Salad"
+      },
       "price": 40000,
       "description": {
         "fa": "سالاد خیار، گوجه و پیاز با آبلیمو",
@@ -273,9 +351,12 @@
       "image": "/images/shirazi.jpg"
     },
     {
-      "id": 26,
+      "id": "26",
       "category": "غذای اصلی",
-      "name": { "fa": "لازانیا", "en": "Lasagna" },
+      "name": {
+        "fa": "لازانیا",
+        "en": "Lasagna"
+      },
       "price": 160000,
       "description": {
         "fa": "لازانیا با سس گوشت و پنیر",
@@ -284,9 +365,12 @@
       "image": "/images/lasagna.jpg"
     },
     {
-      "id": 27,
+      "id": "27",
       "category": "دسر",
-      "name": { "fa": "پودینگ وانیلی", "en": "Vanilla Pudding" },
+      "name": {
+        "fa": "پودینگ وانیلی",
+        "en": "Vanilla Pudding"
+      },
       "price": 45000,
       "description": {
         "fa": "پودینگ نرم با طعم وانیل",
@@ -295,9 +379,12 @@
       "image": "/images/pudding.jpg"
     },
     {
-      "id": 28,
+      "id": "28",
       "category": "نوشیدنی",
-      "name": { "fa": "قهوه اسپرسو", "en": "Espresso Coffee" },
+      "name": {
+        "fa": "قهوه اسپرسو",
+        "en": "Espresso Coffee"
+      },
       "price": 30000,
       "description": {
         "fa": "قهوه اسپرسو غلیظ",
@@ -306,9 +393,12 @@
       "image": "/images/espresso.jpg"
     },
     {
-      "id": 29,
+      "id": "29",
       "category": "غذای اصلی",
-      "name": { "fa": "چلو کباب برگ", "en": "Barg Kebab with Rice" },
+      "name": {
+        "fa": "چلو کباب برگ",
+        "en": "Barg Kebab with Rice"
+      },
       "price": 230000,
       "description": {
         "fa": "کباب برگ گوسفندی با برنج",
@@ -317,9 +407,12 @@
       "image": "/images/barg.jpg"
     },
     {
-      "id": 30,
+      "id": "30",
       "category": "پیش‌غذا",
-      "name": { "fa": "فلافل", "en": "Falafel" },
+      "name": {
+        "fa": "فلافل",
+        "en": "Falafel"
+      },
       "price": 50000,
       "description": {
         "fa": "فلافل ترد با سس تاهینی",
@@ -328,7 +421,6 @@
       "image": "/images/falafel.jpg"
     }
   ],
-
   "slider": [
     {
       "id": "1",
@@ -347,6 +439,23 @@
       "src": "./images/banner/4.jpg"
     }
   ],
-
-  "admin": []
+  "admin": [],
+  "users": [
+    {
+      "id": "9c2d",
+      "firstname": "حسن",
+      "lastname": "ایمانی هاوستین",
+      "number": "09338709245",
+      "email": "hossiiw.0933@gmail.com",
+      "password": "fadfdafds"
+    },
+    {
+      "id": "0dce",
+      "firstname": "اسرا",
+      "lastname": "ایمانی",
+      "number": "09142983383",
+      "email": "hosseinimani.dev@gmail.com",
+      "password": "03029045729"
+    }
+  ]
 }
