@@ -1,11 +1,53 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FcGoogle } from "react-icons/fc";
+import Cookies from "js-cookie";
+import { IFormInputs, ILoginForm } from "@/types/type";
 
 function LoginPage() {
+  const [user, setUser] = useState<IFormInputs>();
+  const [formData, setFormdata] = useState<ILoginForm>();
+  const [flag, setFlag] = useState<boolean>(false);
+  const router = useRouter();
   const { t } = useTranslation();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ILoginForm>();
+
+  useEffect(() => {
+    const data = localStorage.getItem("user");
+    if (data) {
+      setUser(JSON.parse(data));
+    }
+  }, []);
+
+  const onSubmit = (data: ILoginForm) => {
+    setFormdata(data);
+    const response = {
+      token: "kafdjhkldfhsaKLHGSDKLsdfajkiwtr",
+      expire: 7,
+    };
+
+    if (data.email === user?.email && data.password === user?.password) {
+      router.push("/");
+      Cookies.set("loginToken", response.token, { expires: response.expire });
+    }
+    if (
+      user?.email !== formData?.email &&
+      user?.password !== formData?.password
+    ) {
+      setFlag(true);
+    } else {
+      setFlag(false);
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 px-4">
@@ -17,7 +59,13 @@ function LoginPage() {
           <p className="text-center text-gray-500 mb-8">{t("login.title2")}</p>
 
           {/* Form */}
-          <div className="space-y-6">
+          {/* ----------------Error-------------- */}
+          <div className="w-full flex items-center justify-center">
+            {flag ? <p className="text-red-600">{t("login.alret")}</p> : ""}
+          </div>
+          {/* ----------------Error-------------- */}
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            {/* ----------------gmail--------------- */}
             <div>
               <label
                 htmlFor="email"
@@ -26,12 +74,14 @@ function LoginPage() {
                 {t("login.label1")}
               </label>
               <input
+                {...register("email", { required: `${t("signUp.alert1")}` })}
                 type="email"
                 id="email"
                 className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
                 placeholder={t("login.placeholder1")}
               />
             </div>
+            {/* ----------------password--------------- */}
             <div>
               <label
                 htmlFor="password"
@@ -40,6 +90,7 @@ function LoginPage() {
                 {t("login.lable2")}
               </label>
               <input
+                {...register("password", { required: `${t("signUp.alert1")}` })}
                 type="password"
                 id="password"
                 className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
@@ -66,7 +117,7 @@ function LoginPage() {
             >
               {t("login.login")}
             </button>
-          </div>
+          </form>
 
           {/* Divider */}
           <div className="flex items-center my-6">

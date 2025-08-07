@@ -1,8 +1,6 @@
 "use client";
 import { useAuth } from "@/context/AuthContext";
-import { User } from "@/data/users";
 import { IFormInputs } from "@/types/type";
-import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";

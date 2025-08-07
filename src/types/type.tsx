@@ -1,4 +1,3 @@
-
 export type ChildrenType = {
   children: React.ReactNode;
 };
@@ -14,7 +13,9 @@ export type AppContextType = {
 
 export interface IAuthContextType {
   user: IFormInputs | undefined;
-  addUser: (data: IFormInputs ) => void;
+  loginToken: boolean;
+  addUser: (data: IFormInputs) => void;
+  ExitUser: () => void;
 }
 
 export interface ISliderProps {
@@ -34,4 +35,7 @@ export interface IFormInputs {
   password: string;
 }
 
-
+export interface ILoginForm {
+  email: string;
+  password: string;
+}

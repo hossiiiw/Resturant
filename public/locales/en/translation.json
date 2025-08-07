@@ -2,6 +2,7 @@
   "Address": "Tabriz Roshdiye paladiom complex",
   "SignIn": "Sign in",
   "SignUp": "Sign Up",
+  "Exit": "Exit",
   "ShoppingCart": "ShoppingCart",
   "Home": "Home",
   "Menu": "Menu",
@@ -48,6 +49,7 @@
     "desert": "Desert"
   },
   "login": {
+    "alret": "Incorrect password or email",
     "title1": "Login",
     "title2": "Welcome! Sign in to continue",
     "label1": "Email",
