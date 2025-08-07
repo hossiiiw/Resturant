@@ -1,6 +1,7 @@
 "use client";
 import { useAuth } from "@/context/AuthContext";
 import { User } from "@/data/users";
+import { IFormInputs } from "@/types/type";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -31,13 +32,13 @@ function SignUp() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm<IFormInputs>();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: IFormInputs) => {
     localStorage.setItem("user", JSON.stringify(data));
     addUser({
-      firstName: data.firstname,
-      lastName: data.lastname,
+      firstname: data.firstname,
+      lastname: data.lastname,
       number: data.number,
       email: data.email,
       password: data.password,
@@ -57,96 +58,139 @@ function SignUp() {
 
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* ----------------firstname-------------- */}
           <div>
             <label
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.firstname")}
-              {errors.firstname && (
+              {/* {errors.firstname && (
                 <p className="text-red-500">{errors.firstname.message}</p>
+              )} */}
+              {errors.firstname && (
+                <p role="alert" className="text-red-600">
+                  {errors.firstname.message}
+                </p>
               )}
             </label>
             <input
-              {...register("firstname", { required: true })}
+              {...register("firstname", {
+                required: `${t("signUp.alert1")}`,
+              })}
               type="text"
               id="firstName"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
               placeholder={t("signUp.placeholder1")}
             />
           </div>
+          {/* ----------------firstname-------------- */}
+          {/* ----------------lastname-------------- */}
           <div>
             <label
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.lastname")}
-              {errors.lastname && (
+              {/* {errors.lastname && (
                 <p className="text-red-500">{errors.lastname.message}</p>
+              )} */}
+              {errors.firstname && (
+                <p role="alert" className="text-red-600">
+                  {errors.firstname.message}
+                </p>
               )}
             </label>
             <input
-              {...register("lastname", { required: true })}
+              {...register("lastname", {
+                required: `${t("signUp.alert1")}`,
+              })}
               type="text"
               id="lastName"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
               placeholder={t("signUp.placeholder2")}
             />
           </div>
+          {/* ----------------firstname-------------- */}
+          {/* ----------------number-------------- */}
           <div>
             <label
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.number")}
-              {errors.number && (
+              {/* {errors.number && (
                 <p className="text-red-500">{errors.number.message}</p>
+              )} */}
+              {errors.number && (
+                <p role="alert" className="text-red-600">
+                  {errors.number.message}
+                </p>
               )}
             </label>
             <input
-              {...register("number", { required: true })}
+              {...register("number", {
+                required: `${t("signUp.alert2")}`,
+              })}
               type="tel"
               id="phone"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
               placeholder={t("signUp.placeholder3")}
             />
           </div>
+          {/* ----------------number-------------- */}
+          {/* ----------------email-------------- */}
           <div>
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.email")}
-              {errors.email && (
+              {/* {errors.email && (
                 <p className="text-red-500">{errors.email.message}</p>
+              )} */}
+              {errors.email && (
+                <p role="alert" className="text-red-600">
+                  {errors.email.message}
+                </p>
               )}
             </label>
             <input
-              {...register("email", { required: true })}
+              {...register("email", { required: `${t("signUp.alert3")}` })}
               type="email"
               id="email"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
               placeholder={t("signUp.placeholder4")}
             />
           </div>
+          {/* ----------------email-------------- */}
+          {/* ----------------password-------------- */}
           <div>
             <label
               htmlFor="password"
               className="block text-sm font-medium text-gray-700"
             >
               {t("signUp.password")}
-              {errors.password && (
+              {/* {errors.password && (
                 <p className="text-red-500">{errors.password.message}</p>
+              )} */}
+              {errors.password && (
+                <p role="alert" className="text-red-600">
+                  {errors.password.message}
+                </p>
               )}
             </label>
             <input
-              {...register("password", { required: true })}
+              {...register("password", {
+                required: `${t("signUp.alert4")}`,
+              })}
               type="password"
               id="password"
               className="mt-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200 placeholder-gray-400"
               placeholder={t("signUp.placeholder5")}
             />
           </div>
+          {/* ----------------password-------------- */}
 
           {/* Submit Button */}
           <button

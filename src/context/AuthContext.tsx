@@ -1,22 +1,33 @@
 "use client";
-import { User, users } from "@/data/users";
-import { ChildrenType, IAuthContextType } from "@/types/type";
+import {  users } from "@/data/users";
+import { ChildrenType, IAuthContextType, IFormInputs } from "@/types/type";
 import axios from "axios";
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext({} as IAuthContextType);
 
 function AuthContextProvider({ children }: ChildrenType) {
-  const addUser = (data: User) => {
+  const [user, setUser] = useState<IFormInputs>();
+  const addUser = (data: IFormInputs) => {
     users.push(data);
+    setUser(data);
     // axios("http://localhost:3001/users", {
     //   method: "POST",
     //   data: data,
     // });
+    console.log(users);
   };
 
+  if (user) {
+    console.log("first");
+  } else {
+    console.log("no");
+  }
+
   return (
-    <AuthContext.Provider value={{ addUser }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ addUser, user }}>
+      {children}
+    </AuthContext.Provider>
   );
 }
 

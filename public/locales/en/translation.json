@@ -78,6 +78,10 @@
     "signUp": "Registration",
     "google": "Sign up with Google",
     "signIn": "Do you have an account?",
-    "login": "log in"
+    "login": "log in",
+    "alert1": "Must be at least 3 characters and a maximum of 99 characters.",
+    "alert2": "Mobile number must be 11 digits.",
+    "alert3": "Email address is required",
+    "alert4": "Password must be more than 6 characters."
   }
 }

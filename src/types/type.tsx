@@ -1,6 +1,3 @@
-import { User } from "@/data/users";
-import React from "react";
-import z, { Schema } from "zod";
 
 export type ChildrenType = {
   children: React.ReactNode;
@@ -16,7 +13,8 @@ export type AppContextType = {
 };
 
 export interface IAuthContextType {
-  addUser: (data: User) => void;
+  user: IFormInputs | undefined;
+  addUser: (data: IFormInputs ) => void;
 }
 
 export interface ISliderProps {
@@ -28,10 +26,12 @@ export interface ISliderImage {
   src: string;
 }
 
-export type TSingUpForm = {
+export interface IFormInputs {
   firstname: string;
   lastname: string;
   number: string;
   email: string;
   password: string;
-};
+}
+
+

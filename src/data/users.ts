@@ -1,3 +1,5 @@
+import { IFormInputs } from "@/types/type";
+
 export interface User {
   firstName: string;
   lastName: string;
@@ -6,4 +8,4 @@ export interface User {
   password: string;
 }
 
-export let users: User[] =[]
+export let users: IFormInputs[] = [];
