@@ -8,4 +8,4 @@ export interface User {
   password: string;
 }
 
-export let users: IFormInputs[] = [];
+export const users: IFormInputs[] = [];
